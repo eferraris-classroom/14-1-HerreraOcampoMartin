@@ -99,3 +99,21 @@ void liberarNumeros(ListaNumeros *lista){
     free(lista);
 }
 
+ListaNumeros *concatenarLista(ListaNumeros *lista1, ListaNumeros *lista2){
+    Numero *aux = lista1->primero;
+    ListaNumeros *resultado = crearListaNumeros();
+
+    if(aux == NULL){
+        resultado->primero = lista2->primero;
+        // Si el primer elemento de la lista 1 es NULL, entonces le meto la lista 2 y listo.
+        return resultado;
+    }
+
+    for(; aux->siguiente != NULL; aux = aux->siguiente){}
+
+    aux->siguiente = lista2->primero;
+    resultado->primero = lista1->primero;
+
+    return resultado;
+}
+

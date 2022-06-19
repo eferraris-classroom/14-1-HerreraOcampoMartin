@@ -17,6 +17,7 @@ void agregarNumero(ListaNumeros *lista, Numero *nuevo);
 void eliminarNumero(ListaNumeros *lista, int valor);
 void imprimirNumeros(ListaNumeros *lista);
 void liberarNumeros(ListaNumeros *lista);
+ListaNumeros *concatenarLista(ListaNumeros *lista1, ListaNumeros *lista2);
 
 
 #endif
